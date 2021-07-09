@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+
+  <title>Synchronicity</title>
+
+  <link href="vendor/bootstrap-5.0.0-beta3/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="support/synch.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Timekeeper</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-current="page" href="#">TimeSheet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/file-viewer.html">File Viewer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/admin.html">Admin</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div class="input-group input-group-sm">
+            <input type="file" class="form-control" id="csvFileInput" aria-describedby="uploadBtn" aria-label="Upload">
+            <button class="btn btn-outline-secondary" type="button" id="uploadBtn">Upload</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main role="main" class="container">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <ul>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                <ul>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group input-group-sm">
+              <select class="form-select" id="optTicketSelect" aria-label="Add Ticket to table">
+                <option selected>Optional Add Ticket</option>
+              </select>
+            </div>
+          
+
+          
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group input-group-sm">
+              <select class="form-select" id="ticketSelect" aria-label="Add Ticket to table">
+                <option selected>Add Ticket</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <button type="button" id="punchOutBtn" class="btn btn-primary btn-sm">Punch Out</button>
+            <button type="button" id="addTicketButton" class="btn btn-secondary btn-sm">Add Ticket</button>
+          </div>
+        </div>
+      </div>
+      <div id="inputTable" class="card-body"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h1>Output Table</h1>
+      </div>
+      <div id="outputTable" class="card-body">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h1>HighCharts</h1>
+      </div>
+      <figure class="highcharts-figure">
+        <div id="container"></div>
+      </figure>
+    </div>
+
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addModalLabel">Add New Ticket</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="formIssueId" class="col-form-label">Ticket Id</label>
+              <input type="text" class="form-control" id="formIssueId">
+            </div>
+            <div class="mb-3">
+              <label for="Customer" class="col-form-label">Customer:</label>
+              <input type="text" class="form-control" id="formCustomer">
+            </div>
+            <div class="mb-3">
+              <label for="Ticket" class="col-form-label">Ticket:</label>
+              <input type="text" class="form-control" id="formTicket">
+            </div>
+            <div class="mb-3">
+              <label for="Summary" class="col-form-label">Summary:</label>
+              <input type="text" class="form-control" id="formSummary">
+            </div>
+            <div class="mb-3">
+              <label for="Status" class="col-form-label">Status:</label>
+              <input type="text" class="form-control" id="formStatus">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="formAdd" type="button" class="btn btn-primary btn-sm">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript
+      <script src="vendor/bootstrap-5.0.0-beta3/js/bootstrap.bundle.min.js"></script>
+        <script src="./example/form-validation.js"></script>
+    ================================================== -->
+  <script src="vendor/lodash.js"></script>
+  <script src="vendor/moment.min.js"></script>
+
+  <script src="vendor/localforage.min.js"></script>
+  <script src="vendor/popper.min.js"></script>
+
+  <script src="vendor/bootstrap-5.0.0-beta3/js/bootstrap.js"></script>
+  <script src="vendor/PapaParse-5.0.2/papaparse.min.js"></script>
+  <script src="vendor/Highcharts-9.0.1/code/highcharts.js"></script>
+  <script src="vendor/xrange.js"></script>
+
+  <script src="support/synch_fileuploader.js"></script>
+  <script src="support/synch_storage.js"></script>
+  <script src="support/synch_timeOperations.js"></script>
+  <script src="support/synch_ticketOperations.js"></script>
+
+  <script src="support/synch_chart.js"></script>
+  <script src="support/synch_tables.js"></script>
+
+  <script src="support/synch.js"></script>
+</body>
+
+</html>
+
+
+
+    <!-- <div class="row">
+      <label for="formCustomer" class="col-md-2 col-form-label">Customer</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control form-control-sm" id="formCustomer">
+      </div>
+    </div> 
+  
+  
+    <script src="vendor/moment-round.js"></script>
+
+
+      <script src="support/synch_inputTable.js"></script>
+  <script src="support/synch_outputTable.js"></script>
+    <script src="support/synch_sampleData.js"></script>
+  -->

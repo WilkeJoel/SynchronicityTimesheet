@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+
+  <title>Synchronicity-Admin Page</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap-5.0.0-beta3/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../support/synch.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Timekeeper</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../synchronicity.html">TimeSheet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file-viewer.html">File Viewer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-current="page" href="#">Admin</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div class="input-group input-group-sm">
+            <input type="file" class="form-control" id="csvFileInput" aria-describedby="uploadBtn" aria-label="Upload">
+            <button class="btn btn-outline-secondary" type="button" id="uploadBtn">Upload</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main role="main" class="container">
+
+    <div class="card">
+        <div class="card-header">
+          <h1>Admin Testing</h1>
+        </div>
+        <div class="card-body">
+            <div class="mb-3 row">
+                <label for="resetLastTime" class="col-sm-2 col-form-label">Reset Last Time Entry</label>
+                <div class="col-sm-10">
+                  <button type="button" class="btn btn-success mb-3" id="resetLastTime">Reset</button>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h1>Admin Setup</h1>
+      </div>
+      <div id="adminCard" class="card-body">
+
+        <div class="mb-3 row">
+              <label for="clearTime" class="col-sm-2 col-form-label">Clear timeLogStore</label>
+              <div class="col-sm-10">
+                <button type="button" class="btn btn-danger mb-3" id="clearTime">Clear</button>
+              </div>
+            </div>
+
+        <div class="mb-3 row">
+            <label for="clearDaily" class="col-sm-2 col-form-label">Clear dailyTicketStore</label>
+            <div class="col-sm-10">
+              <button type="button" class="btn btn-danger mb-3" id="clearDaily">Clear</button>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="clearDaily" class="col-sm-2 col-form-label">Clear masterTicketStore</label>
+            <div class="col-sm-10">
+              <button type="button" class="btn btn-danger mb-3" id="verifyMaster">Clear</button>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="refreshTime" class="col-sm-2 col-form-label">Refresh timeLogStore</label>
+            <div class="col-sm-10">
+              <button type="button" class="btn btn-success mb-3" id="refreshTime">Refresh</button>
+            </div>
+          </div>
+
+      <div class="mb-3 row">
+          <label for="refreshDaily" class="col-sm-2 col-form-label">Refresh dailyTicketStore</label>
+          <div class="col-sm-10">
+            <button type="button" class="btn btn-success mb-3" id="refreshDaily">Refresh</button>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="refreshDaily" class="col-sm-2 col-form-label">Refresh masterTicketStore</label>
+          <div class="col-sm-10">
+            <button type="button" class="btn btn-success mb-3" id="refreshMaster" disabled >Refresh</button>
+          </div>
+        </div>
+          
+
+
+      </div>
+    </div>
+
+  </main>
+
+  <div class="modal" id="clearModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Are you sure?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This will delete the Master Ticket List</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button id="clearMaster" type="button" class="btn btn-primary">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript
+      <script src="../vendor/bootstrap-5.0.0-beta3/js/bootstrap.bundle.min.js"></script>
+        <script src="./example/form-validation.js"></script>
+    ================================================== -->
+  <script src="../vendor/lodash.js"></script>
+  <script src="../vendor/moment.min.js"></script>
+  <script src="../vendor/localforage.min.js"></script>
+  <script src="../vendor/popper.min.js"></script>
+
+  <script src="../vendor/bootstrap-5.0.0-beta3/js/bootstrap.js"></script>
+  <script src="../vendor/PapaParse-5.0.2/papaparse.min.js"></script>
+
+  <script src="../dataFiles/masterTicketList.js"></script>
+  <script src="../support/synch_sampleData.js"></script>
+  <script src="../support/synch_storage.js"></script>
+  <script src="../support/synch_admin.js"></script>
+
+</body>
+
+</html>
+
