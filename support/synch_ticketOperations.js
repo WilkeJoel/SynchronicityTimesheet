@@ -1,4 +1,3 @@
-
 const addModal = new bootstrap.Modal(document.getElementById('addModal'));
 
 
@@ -44,10 +43,8 @@ function disableSelectOption(optList, idx) {
     optList.options[idx].disabled = true;
 }
 
-const buildSortedTicketSelectDropDown = async() => {
-    const OPT_TICKET_SELECT_ELEMENT = document.getElementById('optTicketSelect');
-
-
+const buildSortedTicketDropDown = async() => {
+    const OPT_TICKET_SELECT_ELEMENT = document.getElementById('dropdownMenu');
 
     await masterTicketStore.iterate((value, key) => {
         if (value.Status === 'To Do'){

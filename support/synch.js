@@ -17,26 +17,29 @@ var dailyTicketStore = localforage.createInstance({
     storeName: 'dailyTicketStore'
 });
 
+var dailyTicketStore = localforage.createInstance({
+    name: 'SynchronicityTimesheet',
+    storeName: 'customerStore'
+});
+
+var dailyTicketStore = localforage.createInstance({
+    name: 'SynchronicityTimesheet',
+    storeName: 'ticketStatusStore'
+});
 
 
+//window.addEventListener('load', () => { setupSynchronicityTimesheet()});
+//  window.addEventListener('load', () => { buildChart()});
 
+// const setupSynchronicityTimesheet = async() => {
+//     // if start of new day--clear current stores
 
-window.addEventListener('load', () => { setupSynchronicityTimesheet()});
-window.addEventListener('load', () => { buildChart()});
-
-
-
-
-
-
-const setupSynchronicityTimesheet = async() => {
-    // if start of new day--clear current stores
-
-    await buildInputTable();
-    await buildTicketSelectDropDown();
+//     await buildInputTable();
+//     await buildTicketSelectDropDown();
     
-    addTimeListener();
- }
+//     addTimeListener();
+//  }
 
 
- buildSortedTicketSelectDropDown();
+ // To Do List
+ //buildSortedTicketDropDown();

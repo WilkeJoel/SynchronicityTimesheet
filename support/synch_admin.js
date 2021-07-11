@@ -1,17 +1,18 @@
 const clearModal = new bootstrap.Modal(document.getElementById('clearModal'));
 
 document.getElementById('verifyMaster').addEventListener('click', () => { clearModal.show()}, false);
-
 document.getElementById('resetLastTime').addEventListener('click', () => { resetLastTime()}, false);
 
 //  clear the specified “store”.
 document.getElementById('clearTime').addEventListener('click', () => { clearTimeLogStore()}, false);
 document.getElementById('clearDaily').addEventListener('click', () => { clearDailyTicketStore()}, false);
 document.getElementById('clearMaster').addEventListener('click', () => { clearMasterTicketStore()}, false);
+document.getElementById('clearCustomer').addEventListener('click', () => { clearCustomerStore()}, false);
 
 document.getElementById('refreshTime').addEventListener('click', () => { refreshTimeLogStore()}, false);
 document.getElementById('refreshDaily').addEventListener('click', () => { refreshTicketLogStore()}, false);
 document.getElementById('refreshMaster').addEventListener('click', () => { refreshMasterLogStore()}, false);
+document.getElementById('refreshCustomer').addEventListener('click', () => { refreshCustomerStore()}, false);
 
 
 var clearTimeLogStore = () => {
@@ -30,6 +31,12 @@ var clearMasterTicketStore = () => {
     masterTicketStore.clear().then(function() {
         console.log('Cleared masterTicketStore');
       });
+}
+
+var clearCustomerStore = () => {
+    customerStore.clear().then(() => {
+        console.log('Cleared customerStore');
+    })
 }
 
 //  Refresh TimeLogStore from sample data
@@ -60,6 +67,23 @@ const refreshTicketLogStore = () => {
 
 const refreshMasterLogStore = () => {
     console.log('Refreshened masterTicketStore');
+}
+
+//  { "Customer": "The Home Depot, Inc.", "ShortName": "Home Depot" },
+const refreshCustomerStore = () => {
+    for (let x in shortCustName) {
+        addCustomerStoreRow(shortCustName[x]);
+    }
+    console.log('Refreshened customerStore');
+}
+
+async function addCustomerStoreRow(obj) {
+    await customerStore.setItem(obj['Customer'], {...obj}).then(() => {
+        console.log("worked: " + obj);
+    })
+    .catch((err) => {
+        console.log(err.message);
+    });
 }
 
 async function addTicketLogStoreRow(rowKey, objVal) {
@@ -99,26 +123,3 @@ const removeTimeLogRow = async (key) => {
         console.log('Key is cleared!');
     })
 }
-
-
-
-// function formatNumber(num) {
-//     var check = Math.round(num * 100) / 100;
-//     var rounded = Math.round(check);
-
-//     return num.toFixed(2);
-// }
-
-// function test(num) {
-//     var formatted = formatNumber(num);
-
-//         console.log(num, "=>", formatted.valueOf());
-
-// }
-// test(1.01);
-// test(1.43);
-// test(23.7);
-// test(1.200123);
-// test(1.000043);
-// test(1.007);
-// test(1.0007);
