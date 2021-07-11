@@ -1,31 +1,20 @@
-let sampleMasterTicketArry = [
-    { "IssueId": "560259", "Status": "To Do", "Ticket": "PS-57972", "Customer": "Hayfield", "Summary": "[DEPLOY]  Hayfield: 3046.4 Upgrade - Test Front-End Output"},
-    { "IssueId": "416759", "Status": "In Investigation", "Ticket": "PS-57913", "Customer": "PWS", "Summary": "[DEV]  Details section appearing incorrectly on line items"},
-    { "IssueId": "9639073", "Status": "To Do", "Ticket": "PS-57849", "Customer": "Alliance", "Summary": "[DEV]  Alliance: 3046.5 FE Audit"},
-    { "IssueId": "217895", "Status": "Done", "Ticket": "PS-57695", "Customer": "Harvey", "Summary": "[DEPLOY] Deploy Harvey Sandbox Upgrade"},
-    { "IssueId": "579348", "Status": "Done", "Ticket": "PS-57659", "Customer": "Home Depot", "Summary": "[DEPLOY]  FE Prep for THD Production Deploy "},
-    { "IssueId": "215478", "Status": "To Do", "Ticket": "PS-57550", "Customer": "Bayer Built", "Summary": "[DEPLOY] Bayer Built - FE deploy - Upgrade PROD to 3045.6"}
+const shortCustName = [
+    { "Customer": "The Home Depot, Inc.", "ShortName": "Home Depot" },
+    { "Customer": "Pella Corporation", "ShortName": "Pella" },
+    { "Customer": "Menard, Inc.", "ShortName": "Menards" },
+    { "Customer": "Associated Materials, LLC", "ShortName": "Alside" },
+    { "Customer": "ABC Supply Co.", "ShortName": "ABC" },
+    { "Customer": "Andersen Corporation", "ShortName": "Andersen" },
+    { "Customer": "Ply Gem Residential Solutions", "ShortName": "PlyGem" },
+    { "Customer": "US LBM Holdings Inc", "ShortName": "US LBM" },
+    { "Customer": "JELD-WEN, Inc.", "ShortName": "JeldWen" },
+    { "Customer": "Simonton Windows, Inc.", "ShortName": "Simonton" },
+    { "Customer": "Milgard Manufacturing, LLC.", "ShortName": "Milgard" },
+    { "Customer": "Lowe’s Home Improvement", "ShortName": "Lowe’s" },
+    { "Customer": "Harvey Windows & Doors", "ShortName": "Harvey" },
+    { "Customer": "Loewen Windows", "ShortName": "Loewen" },
+    { "Customer": "PGT Custom Windows + Doors", "ShortName": "PGT"}
 ];
-
-
-const shortCustName = {
-    "The Home Depot - US": "Home Depot",
-    "Paradigm Window Solutions": "PWS",
-    "American Building Supply": "ABS",
-    "Upstate Door": "Upstate Door",
-    "Vector Windows": "Vector",
-
-    "Bayer Built": "Bayer Built",
-    "MasterGrain": "MasterGrain",
-    "Masonite": "Masonite",
-    "Parksite": "Parksite",
-    "Alliance": "Alliance",
-    "Hayfield": "Hayfield",
-    "Lowe's": "Lowe's",
-    "Harvey": "Harvey",
-    "Marvin": "Marvin",
-    "PGT": "PGT"
-}
 
 const statusList = {
     "Status": "To Do",
@@ -34,10 +23,10 @@ const statusList = {
     "Status": "Resolved",
     "Status": "In Progress",
     "Status": "In Review",
-    "Status": "QA Comp",
+    "Status": "QA Pass",
     "Status": "In Development",
-    "Status": "PQA Comp",
-    "Status": "Closed",
+    "Status": "PR Pass",
+    "Status": "Completed",
     "Status": "In QA",
     "Status": "Delivered"
 }
@@ -45,7 +34,37 @@ const statusList = {
 const statusListWeedOut = {
     "Status": "Done",
     "Status": "Resolved",
-    "Status": "QA Comp",
-    "Status": "Closed",
+    "Status": "QA Pass",
+    "Status": "Completed",
     "Status": "Delivered"
 }
+
+
+/*
+1. Andersen Windows
+2. Pella Windows
+3. Milgard Windows
+4. Simonton Windows
+5. Harvey Windows
+6. Loewen Windows
+7. Ply Gem Windows
+8. Alside Windows
+9. PGT Windows
+10. Jeld Wen Windows
+
+https://modernize.com/windows/brands
+
+
+Do it Best
+Building Materials Outlet
+Lowe’s Home Improvement
+Menard, Inc.
+The Home Depot, Inc.,
+
+
+
+ABC Supply Co.
+Beacon
+84 Lumber
+US LBM Holdings Inc
+*/
