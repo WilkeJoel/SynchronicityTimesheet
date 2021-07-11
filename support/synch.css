@@ -1,0 +1,111 @@
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-top: 6rem;
+}
+
+.card {
+  margin-bottom: 1em;
+}
+
+#ticketSelect,
+#punchOutBtn {
+  margin-bottom: 0 !important;
+}
+
+#punchOutBtn,
+#finish-btn {
+  float: right;
+}
+
+#addTicketButton {
+  float: right;
+  margin-right: .5em;
+}
+
+
+.card-header .form-select {
+  display: inline-block;
+  width: unset;
+}
+
+
+table .input-group .form-control,
+table .input-group .btn {
+  padding: 0.1875rem 0.75rem;
+  font-size: 13px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none;
+  display:none;
+}
+
+tr td {
+  white-space: nowrap;
+}
+
+
+/* --------------------------------------Input Table */
+#inputTable td:nth-child(1) {
+  width: 10%;
+}
+
+#inputTable td:nth-child(6) {
+  width: 5%;
+}
+
+
+/* --------------------------------------Output Table */
+#outputTable table {
+  table-layout: fixed;
+}
+
+#outputTable td,
+#outputTable th {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#outputTable th {
+  width: 8%;
+}
+#outputTable th:nth-child(1) {
+  width: 10%;
+}
+#outputTable th:nth-child(2) {
+  width: 50%;
+}
+
+#outputTable .outputTotal td:nth-child(1) {
+  text-align: right;
+}
+
+
+
+form#addTicket {
+  width: 30rem;
+}
+
+form#addTicket .row {
+  margin: 1rem 1rem 1rem;
+  white-space: nowrap;
+}
+
+form#addTicket .row:first-child {
+  margin: 1.5rem 1rem 1rem;
+  white-space: nowrap;
+}
+
+form#addTicket .row:last-child {
+  margin: 2rem 1rem 1rem;
+  white-space: nowrap;
+}
+
+form#addTicket .btn {
+  float: right;
+}
+
+form#addTicket #formAdd {
+  margin-left: .5rem;
+}
