@@ -6,13 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="Joel Wilke">
   <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
 
   <title>Synchronicity-Admin Page</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap-5.0.0-beta3/css/bootstrap.css" rel="stylesheet">
+  <link href="../vendor/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="../support/synch.css" rel="stylesheet">
@@ -93,6 +93,13 @@
           </div>
 
           <div class="mb-3 row">
+            <label for="clearDaily" class="col-sm-2 col-form-label">Clear customerStore</label>
+            <div class="col-sm-10">
+              <button type="button" class="btn btn-danger mb-3" id="clearCustomer">Clear</button>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
             <label for="refreshTime" class="col-sm-2 col-form-label">Refresh timeLogStore</label>
             <div class="col-sm-10">
               <button type="button" class="btn btn-success mb-3" id="refreshTime">Refresh</button>
@@ -110,6 +117,13 @@
           <label for="refreshDaily" class="col-sm-2 col-form-label">Refresh masterTicketStore</label>
           <div class="col-sm-10">
             <button type="button" class="btn btn-success mb-3" id="refreshMaster" disabled >Refresh</button>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="refreshDaily" class="col-sm-2 col-form-label">Refresh customerStore</label>
+          <div class="col-sm-10">
+            <button type="button" class="btn btn-success mb-3" id="refreshCustomer" >Refresh</button>
           </div>
         </div>
           
@@ -139,21 +153,18 @@
   </div>
 
 
-  <!-- Bootstrap core JavaScript
-      <script src="../vendor/bootstrap-5.0.0-beta3/js/bootstrap.bundle.min.js"></script>
-        <script src="./example/form-validation.js"></script>
-    ================================================== -->
+  <!-- ================================================== -->
   <script src="../vendor/lodash.js"></script>
   <script src="../vendor/moment.min.js"></script>
   <script src="../vendor/localforage.min.js"></script>
   <script src="../vendor/popper.min.js"></script>
+  <script src="../vendor/bootstrap.min.js"></script>
+  <script src="../vendor/papaparse.min.js"></script>
 
-  <script src="../vendor/bootstrap-5.0.0-beta3/js/bootstrap.js"></script>
-  <script src="../vendor/PapaParse-5.0.2/papaparse.min.js"></script>
-
-  <script src="../dataFiles/masterTicketList.js"></script>
+  <script src="../data-files/masterTicketList.js"></script>
   <script src="../support/synch_sampleData.js"></script>
   <script src="../support/synch_storage.js"></script>
+  <script src="../support/synch.js"></script>
   <script src="../support/synch_admin.js"></script>
 
 </body>

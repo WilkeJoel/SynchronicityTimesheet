@@ -11,7 +11,7 @@
 
   <title>Synchronicity</title>
 
-  <link href="vendor/bootstrap-5.0.0-beta3/css/bootstrap.css" rel="stylesheet">
+  <link href="vendor/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="support/synch.css" rel="stylesheet">
@@ -55,10 +55,10 @@
         <div class="row">
           <div class="col-md-6">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown button
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <div id="dropdownMenu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <ul>
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -78,9 +78,6 @@
                 <option selected>Optional Add Ticket</option>
               </select>
             </div>
-          
-
-          
           </div>
         </div>
       </div>
@@ -167,19 +164,14 @@
   </div>
 
 
-  <!-- Bootstrap core JavaScript
-      <script src="vendor/bootstrap-5.0.0-beta3/js/bootstrap.bundle.min.js"></script>
-        <script src="./example/form-validation.js"></script>
-    ================================================== -->
+  <!-- ================================================== -->
   <script src="vendor/lodash.js"></script>
   <script src="vendor/moment.min.js"></script>
-
   <script src="vendor/localforage.min.js"></script>
   <script src="vendor/popper.min.js"></script>
-
-  <script src="vendor/bootstrap-5.0.0-beta3/js/bootstrap.js"></script>
-  <script src="vendor/PapaParse-5.0.2/papaparse.min.js"></script>
-  <script src="vendor/Highcharts-9.0.1/code/highcharts.js"></script>
+  <script src="vendor/bootstrap.min.js"></script>
+  <script src="vendor/papaparse.min.js"></script>
+  <script src="vendor/highcharts.js"></script>
   <script src="vendor/xrange.js"></script>
 
   <script src="support/synch_fileuploader.js"></script>
