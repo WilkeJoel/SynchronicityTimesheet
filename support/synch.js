@@ -1,45 +1,17 @@
-// ___________________________________________________________________________
-// -------------------------------------------------------- Handle localForage
-// ___________________________________________________________________________
 
-var masterTicketStore = localforage.createInstance({
-    name: 'SynchronicityTimesheet',
-    storeName: 'masterTicketStore'
-});
+window.addEventListener('load', () => { setupSynchronicityTimesheet()});
+window.addEventListener('load', () => { buildChart()});
 
-var timeLogStore = localforage.createInstance({
-    name: 'SynchronicityTimesheet',
-    storeName: 'timeLogStore'
-});
+const setupSynchronicityTimesheet = async() => {
+    // if start of new day--clear current stores
 
-var dailyTicketStore = localforage.createInstance({
-    name: 'SynchronicityTimesheet',
-    storeName: 'dailyTicketStore'
-});
-
-var dailyTicketStore = localforage.createInstance({
-    name: 'SynchronicityTimesheet',
-    storeName: 'customerStore'
-});
-
-var dailyTicketStore = localforage.createInstance({
-    name: 'SynchronicityTimesheet',
-    storeName: 'ticketStatusStore'
-});
-
-
-//window.addEventListener('load', () => { setupSynchronicityTimesheet()});
-//  window.addEventListener('load', () => { buildChart()});
-
-// const setupSynchronicityTimesheet = async() => {
-//     // if start of new day--clear current stores
-
-//     await buildInputTable();
-//     await buildTicketSelectDropDown();
+    await buildInputTable();
+    await buildTicketSelectDropDown();
     
-//     addTimeListener();
-//  }
+    addTimeListener();
+ }
 
 
- // To Do List
- //buildSortedTicketDropDown();
+//  To Do List
+buildSortedTicketDropDown();
+
