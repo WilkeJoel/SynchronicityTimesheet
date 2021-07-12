@@ -1,78 +1,86 @@
 Issue key,Issue id,Parent id,Summary,Status,Custom field (Customer)
-PS-57972,451169,,[DEPLOY for PS-57967]  Milgard: 3046.4 Upgrade - Test Front-End Output,To Do,Milgard Manufacturing, LLC
-PS-57913,450991,,[DEV for PS-56108]  Details section appearing incorrectly on line-items,In Investigation,Pella Corporation
-PS-57849,450797,,[DEV for PS-57842]  Alliance: 3046.5 FE Audit,To Do,Alliance
-PS-57695,450177,,[DEPLOY for PS-57691] Deploy Harvey Sandbox Upgrade,Done,Harvey Windows & Doors
-PS-57692,450172,,[DEPLOY for PS-57691] FE Harvey Sandbox Upgrade Prep,Done,Harvey Windows & Doors
-PS-57659,450078,,[DEPLOY for PS-57645]  FE Prep for THD Prod Deploy,Done,The Home Depot, Inc.
-PS-57651,450033,,[DEPLOY for PS-57645] FE prep for THD Stage,Done,The Home Depot, Inc.
+PS-57972,451169,,[DEPLOY for PS-57967]  Milgard: 3046.4 Upgrade - Test Front-End Output,To Do,Milgard Manufacturing LLC
+PS-49913,450991,,[DEV for PS-56108]  Details section appearing incorrectly on line-items,In Progress,Pella Corporation
+PS-57439,450797,,[DEV for PS-57842]  Alliance: 3046.5 FE Audit,To Do,Alliance
+PS-57695,450177,,[DEPLOY for PS-57691]  Deploy Harvey Sandbox Upgrade,Backlog,Harvey Windows & Doors
+PS-57692,450172,,[DEPLOY for PS-57691]  FE Harvey Sandbox Upgrade Prep,Done,Harvey Windows & Doors
+PS-49658,450078,,[DEPLOY for PS-57645]  FE Prep for THD Prod Deploy,Backlog,The Home Depot Inc
+PS-57651,450033,,[DEPLOY for PS-57645]  FE prep for Stage,To Do,JELD-WEN Inc
 PS-57643,450018,,[DEPLOY for PS-55339]  Changes to the Web Centerpoint Landing Page,In Progress,Ply Gem Residential Solutions
-PS-57550,449754,,[DEPLOY for PS-53264] FE deploy - Upgrade PROD to 3045.6,To Do,Andersen Corporation
-PS-57049,448227,,[DEPLOY for PS-55213] Pella - FE deploy - Upgrade PROD to 3045.6,To Do,Pella Corporation
-PS-57039,448203,,[DEV for PS-55339]  Changes to the WebCP Landing Page,Resolved,Ply Gem Residential Solutions
+PS-57550,449754,,[DEPLOY for PS-53264]  FE deploy - Upgrade PROD to 3045.6,To Do,Andersen Corporation
+PS-57049,448227,,[DEPLOY for PS-55213]  Pella - FE deploy - Upgrade PROD to 3045.6,To Do,Pella Corporation
+PS-57039,448203,,[DEV for PS-55339]  Changes to the WebCP Landing Page, Backlog,Ply Gem Residential Solutions
 PS-56992,448064,,[DEV for PS-54150]  Alliance: Workflow Queue Visible to External Users,To Do,Alliance
-PS-56958,448014,,[DEV for PS-56691]  '2' Error on Send to HDBR,Resolved,The Home Depot, Inc.
-PS-56957,448013,,[DEV for PS-56691]  Pricing Error Modal Not Displaying on Pricing Error,Resolved,The Home Depot, Inc.
+PS-56958,448014,,[DEV for PS-56691]  '2' Error on Send to HDBR, Backlog,PGT Custom Windows + Doors
+PS-56957,448013,,[DEV for PS-56691]  Pricing Error Modal Not Displaying on Pricing Error, Backlog,Milgard Manufacturing LLC
 PS-56948,447988,,[DEV for PS-54484]  Frontend Audit - 3045.8 upgrade,Done,US LBM Holdings Inc
-PS-56694,447114,,[DEV for PS-56691]  Pricing Error Modal Always Displays on Send to HDBR,Resolved,The Home Depot, Inc.
+PS-56694,447114,,[DEV for PS-56691]  Pricing Error Modal Always Displays on Send to HDBR, Backlog,Simonton Windows Inc
 PS-56680,447068,,[DEV EST for PS-44502]  FE - Adding all ship to's to the Shipping Edit button,In Review,PGT Custom Windows + Doors
-PS-56507,446433,,[DEV for PS-54821]  Change cart icon on product selection page,QA Pass,Menard, Inc.
+PS-56507,446433,,[DEV for PS-54821]  Change cart icon on product selection page,QA Pass,Menard Inc
 PS-56500,446414,,[DEV for PS-56108]  Details section appearing incorrectly on line-items,QA Pass,Pella Corporation
-PS-56322,445906,,[DEV for PS-54543]  Fixing Order Numbers Not Being Overwritten by Cookie Info,Resolved,The Home Depot, Inc.
-PS-56316,445857,,[DEV for PS-54543]  THD Omni Order number is displayed,Done,The Home Depot, Inc.
-PS-56042,444950,,[DEV for PS-55998]  Remove Pella Mulling Code - Investigation,In QA,The Home Depot, Inc.
-PS-56000,444747,,[DEV for PS-55998]  Remove Pella Mulling Code - Dev Ticket,Resolved,The Home Depot, Inc.
-PS-55997,444743,,[DEV for PS-55996]  Adjust Composer Lines in FE Code,Resolved,The Home Depot, Inc.
-PS-55854,444218,,[DEPLOY for PS-54543]  4/1 - UAT Deploy,Done,The Home Depot, Inc.
+PS-56322,445906,,[DEV for PS-54543]  Fixing Order Numbers Not Being Overwritten by Cookie Info,Resolved,PGT Custom Windows + Doors
+PS-56316,445857,,[DEV for PS-54543]  Omni Order number is displayed,Backlog,The Home Depot Inc
+PS-56042,444950,,[DEV for PS-55998]  Remove Pella Mulling Code - Investigation,In QA,Lowe’s Home Improvement
+PS-56000,444747,,[DEV for PS-55998]  Remove Pella Mulling Code - Dev Ticket,Resolved,Associated Materials LLC
+PS-55997,444743,,[DEV for PS-55996]  Adjust Composer Lines in FE Code,In QA,PGT Custom Windows + Doors
+PS-55854,444218,,[DEPLOY for PS-54543]  4/1 - UAT Deploy,Backlog,Simonton Windows Inc
 PS-55723,443861,,[DEV for PS-55455]  Admin Tools missing from dropdown,In Development,Loewen Windows
-PS-55721,443849,,[DEV for PS-53031]  THD Reports Endpoint for Email -CC Issue - FE,QA Pass,The Home Depot, Inc.
-PS-55573,443231,,[DEV for PS-55568]  Notes tab - adding custom dev back in,Resolved,Andersen Corporation
-PS-55501,442839,,[DEV for PS-55500]  Rework Associate Email not Defaulting in Email Module,Delivered,The Home Depot, Inc.
-PS-55438,442440,,[DEV for PS-55429]  Warranties not displaying on reports when warranties box is checked,Resolved,The Home Depot, Inc.
+PS-55721,443849,,[DEV for PS-53031]  Reports Endpoint for Email -CC Issue - FE,QA Pass,US LBM Holdings Inc
+PS-55573,443231,,[DEV for PS-55568]  Notes tab - adding custom dev back in, Backlog,Andersen Corporation
+PS-55501,442839,,[DEV for PS-55500]  Rework Associate Email not Defaulting in Email Module,Delivered,Lowe’s Home Improvement
+PS-55438,442440,,[DEV for PS-55429]  Warranties not displaying on reports when warranties box is checked,Resolved,Simonton Windows Inc
 PS-55428,442357,,[DEV for PS-55339]  Changes to the Centerpoint Landing Page-FE,Resolved,Ply Gem Residential Solutions
 PS-55342,442035,,[DEV for PS-53264]  Andersen TEST upgrade to 3045.6 - WebCP issues,Resolved,Andersen Corporation
-PS-55319,441916,,[DEV for PS-53031]  THD Reports Endpoint for Email - FE UAT Bug,Resolved,The Home Depot, Inc.
-PS-55276,441700,,[DEV for PS-55234]  Alside: Webcp Redirect,Resolved,Associated Materials, LLC
-PS-55232,441539,,[DEV for PS-55213]  Change Portal Internet Link,Resolved,Pella Corporation
-PS-54985,440496,,[DEPLOY for PS-54984]  Cat Test Deploy to get environments matching,To Do,The Home Depot, Inc.
-PS-54809,439820,,[DEV for PS-43510]  Option A and B Mockups,Done,Andersen Corporation
-PS-54545,438848,,"[DEV for PS-54543]  On opening staged orders, Omni design number is displayed instead of H order number",Resolved,The Home Depot, Inc.
+PS-55319,441916,,[DEV for PS-53031]  THD Reports Endpoint for Email - FE UAT Bug,In QA,The Home Depot Inc
+PS-55276,441700,,[DEV for PS-55234]  Alside: Webcp Redirect,In PR Rev,Associated Materials LLC
+PS-55232,441539,,[DEV for PS-55213]  Change Portal Internet Link,In Review,Pella Corporation
+PS-54985,440496,,[DEPLOY for PS-54984]  Cat Test Deploy to get environments matching,To Do,PGT Custom Windows + Doors
+PS-54809,439820,,[DEV for PS-43510]  Option A and B Mockups,To Do,Andersen Corporation
+PS-54545,438848,,[DEV for PS-54543]  On opening staged orders, Omni design number is displayed instead of H order number,Resolved,Lowe’s Home Improvement
 PS-54505,438747,,[DEV for PS-53760]  Harvey 3046 FE Remediation,In Development,Harvey Windows & Doors
 PS-54422,438360,,[DEV for PS-52608]  US LBM Setup,PQA Pass,US LBM Holdings Inc
-PS-54391,438202,,[DEV for PS-54389]  Investigate and fix ABC standard commit,Done,ABC Supply Co.
-PS-53922,436442,,[DEV for PS-53921]  ABC: Line Item Branding,Resolved,ABC Supply Co.
-PS-53835,436130,,[LLC DEPLOY]  March Requirements,Done,The Home Depot, Inc.
-PS-53671,435399,,[DEV for PS-52993]  Login Page Branding,Resolved,ABC Supply Co.
-PS-53362,434342,,[DEV for PS-53031]  THD Reports Endpoint for Email - FE,Resolved,The Home Depot, Inc.
-PS-53075,432890,,[DEPLOY for PS-52855]  Andersen - Add Home Page Tiles to Production,Done,Andersen Corporation
-PS-53020,432674,,[DEPLOY for PS-52993]  Login Page/Line Item Branding,Done,ABC Supply Co.
+PS-54391,438202,,[DEV for PS-54389]  Investigate and fix ABC standard commit,Done,ABC Supply Co
+PS-53922,436442,,[DEV for PS-53921]  ABC: Line Item Branding,In PR Rev,ABC Supply Co
+PS-53835,436130,,[LLC DEPLOY]  March Requirements,Done,Simonton Windows Inc
+PS-53671,435399,,[DEV for PS-52993]  Login Page Branding,QA Pass,ABC Supply Co
+PS-53362,434342,,[DEV for PS-53031]  Reports Endpoint for Email - FE,In Review,JELD-WEN Inc
+PS-53075,432890,,[DEPLOY for PS-52855]  Andersen - Add Home Page Tiles to Production,In Review,Andersen Corporation
+PS-53020,432674,,[DEPLOY for PS-52993]  Login Page/Line Item Branding,In QA,ABC Supply Co
 PS-52844,432006,,[DEPLOY for PS-52825]  Andersen - Home Page Tiles Update Test,Done,Andersen Corporation
-PS-52843,432004,,[DEV for PS-52825]  Andersen - Home Page Tiles Update Test,Resolved,Andersen Corporation
-PS-52831,431965,,[MERGE] [DEV for PS-52423]  Removing Code from Current Build - FE,Resolved,The Home Depot, Inc.
-PS-52683,431383,,[DEPLOY for PS-52681] FE THD Stage Deploy,Completed,The Home Depot, Inc.
-PS-52682,431382,,[DEPLOY for PS-52680] FE THD Cat Test Deploy,Done,The Home Depot, Inc.
-PS-52443,430381,,[DEPLOY for PS-52423]  Removing Code from Current Build - FE,Done,The Home Depot, Inc.
-PS-52438,430373,,[DEV for PS-52423]  Removing Code from Current Build - FE,Resolved,The Home Depot, Inc.
-PS-51293,426800,,[DEV for PS-51175]  Landing Page Tiles Image Updates,Resolved,ABC Supply Co.
-PS-51099,426166,,THD App Sprint 20.1 - FE Deploy to UAT,Done,The Home Depot, Inc.
-PS-51078,426057,,THD App Sprint 20 - FE Deploy to THDTest,Done,The Home Depot, Inc.
-PS-50761,424983,,FE Deploy to UAT - 1/8,Done,The Home Depot, Inc.
-PS-50669,424558,,PS-50668 - Smart scrolling in Web CP,Resolved,JELD-WEN, Inc.
-PS-50559,423919,,THD Email FE Changes,In QA,The Home Depot, Inc.
-PS-50469,423298,,FE Deploy to UAT - 12/23,Done,The Home Depot, Inc.
-PS-50367,422635,,Increase Drawing dimensions in web.,To Do,The Home Depot, Inc.
-PS-50283,422196,,THD App Sprint 19 - FE Deploy to THDTest - 12/17,Done,The Home Depot, Inc.
-PS-50136,421236,,Customizing Send Email Form,Resolved,The Home Depot, Inc.
-PS-49931,420340,,THD App Sprint 19 - FE Deploy to THDTest,Done,The Home Depot, Inc.
-PS-49539,418316,,Save / Send to HDBR is enabled after deleting all of the line-items/ no line-items in the design,Resolved,The Home Depot, Inc.
-PS-49321,417224,,[DEV FOR PS-49318] Error message wording change [PS-49321],Resolved,Lowe’s Home Improvement
-PS-49243,416873,,THD FE 3045 Audit,Completed,The Home Depot, Inc.
-PS-49213,416759,,[DEV/PQA/QA for PS-49158] Update WebCP Theme,Resolved,Associated Materials, LLC
-PS-45488,402116,,Paperwork modal keeps popping up on line-items page. [PS-45488],Completed,The Home Depot, Inc.
-PS-44290,397601,367872,PS-40764 - Design Number displaying instead of H Number,Completed,The Home Depot, Inc.
-PS-43883,396142,367917,"PS-40822 - If click X on update pk modal, it will not update pk any more",Completed,The Home Depot, Inc.
-PS-43879,396126,368308,PS-40822 - Update PK Modal appear even the design has been updated in server processing,Completed,The Home Depot, Inc.
-PS-43685,395574,367917,PS-40822 - Update PK Modal displays even the design has been update and open again,Completed,The Home Depot, Inc.
-PS-42855,392570,,Refactor/Rename component,Completed,The Home Depot, Inc.
-PS-32916,367543,,Hide Quote Number,Resolved,The Home Depot, Inc.
-PS-28864,385262,,THD - 3044.5 Upgrade FE,Done,The Home Depot, Inc.
+PS-52843,432004,,[DEV for PS-52825]  Andersen - Home Page Tiles Update Test,In PR Rev,Andersen Corporation
+PS-52831,431965,,[MERGE] [DEV for PS-52423]  Removing Code from Current Build - FE,In PR Rev,Lowe’s Home Improvement
+PS-52683,431383,,[DEPLOY for PS-52681]  FE THD Stage Deploy,In Review,The Home Depot Inc
+PS-52682,431382,,[DEPLOY for PS-52680]  FE Cat Test Deploy,In QA,US LBM Holdings Inc
+PS-52443,430381,,[DEPLOY for PS-52423]  Removing Code from Current Build - FE,Delivered,Menard Inc
+PS-52438,430373,,[DEV for PS-52423]  Removing Code from Current Build - FE,In Review,Milgard Manufacturing LLC
+PS-51293,426800,,[DEV for PS-51175]  Landing Page Tiles Image Updates,Resolved,ABC Supply Co
+PS-51099,426166,,App Sprint 20.1 - FE Deploy to UAT,Backlog,Loewen Windows
+PS-51078,426057,,App Sprint 20 - FE Deploy to Test,In QA,Associated Materials LLC
+PS-50761,424983,,FE Deploy to UAT - 1/8,In Progress,Milgard Manufacturing LLC
+PS-50669,424558,,PS-50668 - Smart scrolling in Web CP,In PR Rev,JELD-WEN Inc
+PS-50559,423919,,Email FE Changes,In QA,Ply Gem Residential Solutions
+PS-50469,423298,,FE Deploy to UAT - 12/23,Done,Menard Inc
+PS-50367,422635,,Increase Drawing dimensions in web,To Do,Loewen Windows
+PS-50283,422196,,THD App Sprint 19 - FE Deploy to THDTest - 12/17,In Progress,The Home Depot Inc
+PS-50136,421236,,Customizing Send Email Form,QA Pass,Menard Inc
+PS-49931,420340,,App Sprint 19 - FE Deploy to Test,Delivered,Ply Gem Residential Solutions
+PS-49539,418316,,Save / Send to HDBR is enabled after deleting all of the line-items/ no line-items in the design,Resolved,Pella Corporation
+PS-49321,417224,,[DEV FOR PS-49318]  Error message wording change [PS-49321],In QA,Lowe’s Home Improvement
+PS-49243,416873,,FE 3045 Audit,In Progress,US LBM Holdings Inc
+PS-49213,416759,,[DEV/PQA/QA for PS-49158]  Update WebCP Theme,In QA,Associated Materials LLC
+PS-45488,402116,,Paperwork modal keeps popping up on line-items page [PS-45488],Done,Milgard Manufacturing LLC
+PS-44290,397601,367872,PS-40764 - Design Number displaying instead of H Number,In QA,Menard Inc
+PS-43883,396142,367917,PS-40822 - If click X on update pk modal,it will not update pk any more,Done,JELD-WEN Inc
+PS-43879,396126,368308,PS-40822 - Update PK Modal appear even the design has been updated in server processing,In Progress,Pella Corporation
+PS-43685,395574,367917,PS-40822 - Update PK Modal displays even the design has been update and open again,In Review,Associated Materials LLC
+PS-42855,392570,,Refactor/Rename component,Done,Milgard Manufacturing LLC
+PS-32916,367543,,Hide Quote Number,QA Pass,Menard Inc
+PS-28864,385262,,3044.5 Upgrade FE,In Progress,US LBM Holdings Inc
+PS-57968,560259,[DEPLOY]  Loewen: 3046.4 Upgrade - Test Front-End Output,In Development,Loewen Windows
+PS-57913,415459,[DEV]  Details section appearing incorrectly on line items,In Development,ABC Supply Co
+PS-57849,9639073,[DEV]  JeldWen: 3046.5 FE Audit,In Progress,JELD-WEN Inc
+PS-56015,217895,[DEPLOY]  Deploy Harvey Sandbox Upgrade,In Development,Harvey Windows & Doors
+PS-57659,579348,[DEPLOY]  FE Prep for Production Deploy,In Development,The Home Depot Inc
+PS-47540,215478,[DEPLOY]  Simonton - FE deploy - Upgrade PROD to 3045.6,In Development,Simonton Windows Inc
+
+
