@@ -15,7 +15,7 @@
   <link href="../vendor/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="../support/synch.css" rel="stylesheet">
+  <link href="../support/shared_styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,17 +23,13 @@
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Timekeeper</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
             <a class="nav-link" href="../synchronicity.html">TimeSheet</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="file-viewer.html">File Viewer</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" aria-current="page" href="#">Admin</a>
@@ -51,88 +47,114 @@
 
   <main role="main" class="container">
 
-    <div class="card">
-        <div class="card-header">
-          <h1>Admin Testing</h1>
-        </div>
-        <div class="card-body">
-            <div class="mb-3 row">
-                <label for="resetLastTime" class="col-sm-2 col-form-label">Reset Last Time Entry</label>
-                <div class="col-sm-10">
-                  <button type="button" class="btn btn-success mb-3" id="resetLastTime">Reset</button>
-                </div>
-              </div>
-        </div>
-    </div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Entry</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="masterTicket-tab" data-bs-toggle="tab" data-bs-target="#masterTicketPanel" type="button" role="tab" aria-controls="masterTicketPanel" aria-selected="true">Master Ticket List</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="reset-tab" data-bs-toggle="tab" data-bs-target="#resetPanel" type="button" role="tab" aria-controls="resetPanel" aria-selected="false">Store Reset</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="testing-tab" data-bs-toggle="tab" data-bs-target="#testingPanel" type="button" role="tab" aria-controls="testingPanel" aria-selected="false">Testing</button>
+      </li>
+    </ul>
 
-    <div class="card">
-      <div class="card-header">
-        <h1>Admin Setup</h1>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
       </div>
-      <div id="adminCard" class="card-body">
+      <div class="tab-pane active" id="masterTicketPanel" role="tabpanel" aria-labelledby="masterTicket-tab">
+        <h1>Master Ticket List</h1>
+        <div id="masterTicketTable" class="card-body"></div>
+      </div>
 
+      <div class="tab-pane" id="resetPanel" role="tabpanel" aria-labelledby="reset-tab">
+        <h1>Admin Setup</h1>
         <div class="mb-3 row">
-              <label for="clearTime" class="col-sm-2 col-form-label">Clear timeLogStore</label>
-              <div class="col-sm-10">
-                <button type="button" class="btn btn-danger mb-3" id="clearTime">Clear</button>
-              </div>
-            </div>
-
-        <div class="mb-3 row">
-            <label for="clearDaily" class="col-sm-2 col-form-label">Clear dailyTicketStore</label>
-            <div class="col-sm-10">
-              <button type="button" class="btn btn-danger mb-3" id="clearDaily">Clear</button>
-            </div>
-          </div>
-
-          <div class="mb-3 row">
-            <label for="clearDaily" class="col-sm-2 col-form-label">Clear masterTicketStore</label>
-            <div class="col-sm-10">
-              <button type="button" class="btn btn-danger mb-3" id="verifyMaster">Clear</button>
-            </div>
-          </div>
-
-          <div class="mb-3 row">
-            <label for="clearDaily" class="col-sm-2 col-form-label">Clear customerStore</label>
-            <div class="col-sm-10">
-              <button type="button" class="btn btn-danger mb-3" id="clearCustomer">Clear</button>
-            </div>
-          </div>
-
-          <div class="mb-3 row">
-            <label for="refreshTime" class="col-sm-2 col-form-label">Refresh timeLogStore</label>
-            <div class="col-sm-10">
-              <button type="button" class="btn btn-success mb-3" id="refreshTime">Refresh</button>
-            </div>
-          </div>
-
-      <div class="mb-3 row">
-          <label for="refreshDaily" class="col-sm-2 col-form-label">Refresh dailyTicketStore</label>
+          <label for="clearTime" class="col-sm-2 col-form-label">timeLogStore</label>
           <div class="col-sm-10">
+            <button type="button" class="btn btn-danger mb-3" id="clearTime">Clear</button>
+            <button type="button" class="btn btn-success mb-3" id="refreshTime">Refresh</button>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="clearDaily" class="col-sm-2 col-form-label">Clear dailyTicketStore</label>
+          <div class="col-sm-10">
+            <button type="button" class="btn btn-danger mb-3" id="clearDaily">Clear</button>
             <button type="button" class="btn btn-success mb-3" id="refreshDaily">Refresh</button>
           </div>
         </div>
 
         <div class="mb-3 row">
-          <label for="refreshDaily" class="col-sm-2 col-form-label">Refresh masterTicketStore</label>
+          <label for="clearDaily" class="col-sm-2 col-form-label">Clear masterTicketStore</label>
           <div class="col-sm-10">
-            <button type="button" class="btn btn-success mb-3" id="refreshMaster" disabled >Refresh</button>
+            <button type="button" class="btn btn-danger mb-3" id="verifyMaster">Clear</button>
+            <button type="button" class="btn btn-success mb-3" id="refreshMaster" disabled>Refresh</button>
           </div>
         </div>
 
         <div class="mb-3 row">
-          <label for="refreshDaily" class="col-sm-2 col-form-label">Refresh customerStore</label>
+          <label for="clearDaily" class="col-sm-2 col-form-label">CustomerStore</label>
           <div class="col-sm-10">
-            <button type="button" class="btn btn-success mb-3" id="refreshCustomer" >Refresh</button>
+            <button type="button" class="btn btn-danger mb-3" id="clearCustomer">Clear</button>
+            <button type="button" class="btn btn-success mb-3" id="refreshCustomer">Refresh</button>
           </div>
         </div>
-          
+      </div>
 
-
+      <div class="tab-pane" id="testingPanel" role="tabpanel" aria-labelledby="testing-tab">
+        <h1>Admin Testing</h1>
+        <div class="mb-3 row">
+          <label for="resetLastTime" class="col-sm-2 col-form-label">Reset Last Time Entry</label>
+          <div class="col-sm-10">
+            <button type="button" class="btn btn-success mb-3" id="resetLastTime">Reset</button>
+          </div>
+        </div>
       </div>
     </div>
 
   </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Ticket</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="Customer" class="col-form-label">Customer:</label>
+              <input type="text" class="form-control" id="Customer">
+            </div>
+            <div class="mb-3">
+              <label for="Ticket" class="col-form-label">Ticket:</label>
+              <input type="text" class="form-control" id="Ticket">
+            </div>
+            <div class="mb-3">
+              <label for="Summary" class="col-form-label">Summary:</label>
+              <input type="text" class="form-control" id="Summary">
+            </div>
+            <div class="mb-3">
+              <label for="Status" class="col-form-label">Status:</label>
+              <input type="text" class="form-control" id="Status">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="saveBtn" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="modal" id="clearModal" tabindex="-1">
     <div class="modal-dialog">
@@ -162,12 +184,13 @@
   <script src="../vendor/papaparse.min.js"></script>
 
   <script src="../data-files/masterTicketList.js"></script>
-  <script src="../support/synch_sampleData.js"></script>
-  <script src="../support/synch_storage.js"></script>
-  <script src="../support/synch.js"></script>
-  <script src="../support/synch_admin.js"></script>
 
+  <script src="../support/shared_stores.js"></script>
+  <script src="../support/shared_tables.js"></script>
+  <script src="../support/synch_storage.js"></script>
+  <script src="../support/admin_masterTable.js"></script>
+  <script src="../support/admin.js"></script>
+  
 </body>
 
 </html>
-
