@@ -45,32 +45,38 @@ function disableSelectOption(optList, idx) {
 
 const buildSortedTicketDropDown = async() => {
     const OPT_TICKET_SELECT_ELEMENT = document.getElementById('dropdownMenu');
+    const statuses = ['current', 'future', 'past'];
+    const currentArr = ['To Do',"In Progress","In Development"];
+    const futureArr = ["Backlog","In PR Rev","In QA","In Review","QA Pass"];
+
+    for (let x in statuses) {
+        const ul = document.createElement('UL');
+        ul.setAttribute('id', (statuses[x]));
+        OPT_TICKET_SELECT_ELEMENT.appendChild(ul);
+    }
+
+      const currentParent = document.getElementById('current');
+      const futureParent = document.getElementById('future');
+      const pastParent = document.getElementById('past');
 
     await masterTicketStore.iterate((value, key) => {
-        if (value.Status === 'To Do'){
+        const elem = document.createElement('li');
+        elem.innerHTML = `<a class="dropdown-item" href="#">${value.Customer} :: ${value.Ticket} ${value.Summary.substr(0, 50)}</a>`
 
-            const elem = document.createElement('li');
-            elem.innerHTML = `<a class="dropdown-item" href="#">${value.Customer} :: ${value.Ticket} ${value.Summary.substr(0, 50)}</a>`
-           
-           
-           // const textNode = document.createTextNode(`${value.Customer} :: ${value.Ticket} ${value.Summary.substr(0, 50)}`);
-        
-
-
-
-            //elem.appendChild(textNode);
-
-            OPT_TICKET_SELECT_ELEMENT.appendChild(elem);
+        if (currentArr[value.Status]) {
+            currentParent.appendChild(elem);
         }
-        
-
-        
+        else if (futureArr[value.Status]) {
+            futureParent.appendChild(elem);
+        }
+        else {
+            pastParent.appendChild(elem);
+        }
     })
     .catch((err) => {
         console.log(err);
     });
 }
-
 
 
 // ___________________________________________________________________________
