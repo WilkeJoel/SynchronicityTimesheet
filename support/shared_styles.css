@@ -55,6 +55,10 @@ tr td {
   width: 5%;
 }
 
+li {
+  list-style-type: none;
+}
+
 
 /* --------------------------------------Output Table */
 #outputTable table {

@@ -15,6 +15,11 @@ document.getElementById('refreshMaster').addEventListener('click', () => { refre
 document.getElementById('refreshCustomer').addEventListener('click', () => { refreshCustomerStore()}, false);
 
 
+
+
+// ______________________________________________________________________________________________
+// ---------------------------------------------------------------------------------------- Reset
+// ______________________________________________________________________________________________
 var clearTimeLogStore = () => {
     timeLogStore.clear().then(() => {
         console.log('Cleared timeLogStore');
@@ -41,17 +46,12 @@ var clearCustomerStore = () => {
 
 //  Refresh TimeLogStore from sample data
 const refreshTimeLogStore = () => {
-    for (let i = 0; i < xAxix.length; i++) {
+    for (let i = 0; i < sampleChartTimes.length; i++) {
         let x = i;
 
-        if (i < 10){
-            i = `0${i}`;
-        }
-        else {
-            i = `${i}`;
-        }
+        i = (i < 10) ? `0${i}` : `${i}`;
         
-        addTimeLogStoreRow(i, xAxix[x]);
+        addTimeLogStoreRow(i, sampleChartTimes[x]);
     }
     console.log('Refreshened timeLogStore');
 }
@@ -95,6 +95,10 @@ async function addTicketLogStoreRow(rowKey, objVal) {
 }
 
 
+
+// ______________________________________________________________________________________________
+// -------------------------------------------------------------------------------------- Testing
+// ______________________________________________________________________________________________
 const resetLastTime = async () => {
     let position;
     let removeKey;
@@ -112,10 +116,9 @@ const resetLastTime = async () => {
         removeTimeLogRow(removeKey);
     })
     .then(() => {
-        addTimeLogStoreRow(removeKey, xAxix[position]);
+        addTimeLogStoreRow(removeKey, sampleChartTimes[position]);
     })
 }
-
 
 const removeTimeLogRow = async (key) => {
     await timeLogStore.removeItem(key).then(function() {
