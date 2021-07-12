@@ -1,9 +1,20 @@
 const FILE_INPUT_ELEMENT = document.getElementById('csvFileInput');
 const FILE_UPLOAD_BTN = document.getElementById('uploadBtn');
 
+
+
+
+// ___________________________________________________________________________
+// ----------------------------------------------------------------- Listeners
+// ___________________________________________________________________________
+
 FILE_UPLOAD_BTN.addEventListener('click', () => { fileUpload(FILE_INPUT_ELEMENT); }, false);
 
 
+
+// ___________________________________________________________________________
+// ------------------------------------------------------------- File Uploader
+// ___________________________________________________________________________
 
 function fileUpload(elem) {
     const myfile = elem.files[0];
@@ -62,68 +73,3 @@ function updateMasterTicketList(arr) {
     })
    // setupSynchronicityTimesheet();
 }
-
-// function typedArrayToURL(data, mimeType) {
-//     return URL.createObjectURL(new Blob([data], { type: mimeType }))
-// }
-
-// const downloadToFile = (content, filename, contentType) => {
-//     const mimeType = 'application/json';
-//     const jsonContent = JSON.stringify(content, null, 2);
-//     const url = typedArrayToURL(jsonContent, mimeType);
-//     const link = document.createElement('a');
-
-//     link.href = url;
-//     link.download = filename;
-//     link.click();
-
-//     URL.revokeObjectURL(url);
-
-//     alert('Finished with downloading file');
-// };
-
-// function searchTest(val) {
-//     const ticket = _.find(MASTER_TICKET_ARRY, { 'props.Ticket': val });
-
-//     alert('Search: ' + ticket);
-// }
-
-// function enterNewTicket(e) {
-//     e.preventDefault();
-//     let myArr = [];
-//     const inputs = ADD_TICKET_FORM.elements;
-//     const myObj = {};
-
-//     if (!inputs.formIssueId.value) {
-//         const ticket = _.find(masterTixArr, { 'IssueId': elem.value });
-
-//         const tempId = Date.now().toString();
-
-//         newTime = Date.now();
-//         //= 13
-//     }
-//     else {
-//         myobj.IssueId = inputs.formIssueId.value; // Most likely NOT available
-//     }
-
-//     const ticket = _.find(masterTixArr, { 'IssueId': elem.value });
-
-//     myObj.Ticket = inputs.formTicket.value;
-//     myObj.Summary = shortenSummary(inputs.formSummary.value);
-//     myObj.Customer = shortCustName(inputs.formCustomer.value);
-
-//     //TODO::  if IssueId is blank -------------------------------------------------------------------------------
-
-//     myobj.IssueId = 1969;
-//     myObj.Ticket = 'JW-Joel';
-//     myObj.Customer = 'Wilke';
-//     myObj.Summary = 'I want my MTV.';
-
-//     myArr.push(myObj);
-
-//     //setupTicketSelect(myArr);
-
-//     //updateMasterTicketList(myArr);
-
-//     //MASTER_TICKET_ARRY.push(myObj);
-// };
