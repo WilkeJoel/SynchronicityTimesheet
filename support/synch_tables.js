@@ -74,7 +74,7 @@ function buildOutputTableFoot(tblElem) {
 
 
 async function buildOutputTable() {
-    const tableKeys = ['Customer', 'Ticket', 'Total (min)', 'Round', 'Diff (min)', 'Val Add', 'Non-VA'];
+    const tableKeys = ['Customer', 'Ticket', 'Total (min)', 'Round', 'Diff (min)', 'Billable', 'Non-Bill'];
     const tableElem = OUTPUT_TABLE_ID;
 
     buildATable(tableElem);

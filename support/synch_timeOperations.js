@@ -65,7 +65,6 @@ async function punchOut() {
 async function daysEnd(){
     //const endTime = Date.now();
     const endTime = 1625333468000;   // ---------------------------------------------- TODO: Remove for Prod
-
     const keyNum = await timeLogStore.length();
 
     await editTimeLogStoreRow(keyNum-1, {x2:endTime});

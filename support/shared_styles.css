@@ -55,8 +55,12 @@ tr td {
   width: 5%;
 }
 
-li {
+ul li {
   list-style-type: none;
+}
+
+ol li {
+  list-style-type:unset;
 }
 
 
