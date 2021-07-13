@@ -55,14 +55,21 @@ tr td {
   width: 5%;
 }
 
-ul li {
+/* ul li {
   list-style-type: none;
 }
 
 ol li {
   list-style-type:unset;
+} */
+.dropdown-menu ul {
+    padding: .5rem 0;
+    margin: 0;
 }
 
+.dropdown-menu ul li {
+  list-style-type: none;
+}
 
 /* --------------------------------------Output Table */
 #outputTable table {
@@ -93,13 +100,11 @@ ol li {
 .accordion-card-header {
   padding: 0;
 }
-
 .accordion-card-header .accordion-button {
   font-weight: 500;
   font-size: unset;
   background-color: unset;
 }
-
 .accordion-card-header .accordion-button:not(.collapsed) {
   color: initial;
   background-color: none;
@@ -112,26 +117,58 @@ ol li {
 form#addTicket {
   width: 30rem;
 }
-
 form#addTicket .row {
   margin: 1rem 1rem 1rem;
   white-space: nowrap;
 }
-
 form#addTicket .row:first-child {
   margin: 1.5rem 1rem 1rem;
   white-space: nowrap;
 }
-
 form#addTicket .row:last-child {
   margin: 2rem 1rem 1rem;
   white-space: nowrap;
 }
-
 form#addTicket .btn {
   float: right;
 }
-
 form#addTicket #formAdd {
   margin-left: .5rem;
+}
+
+
+/* --------------------------------------Test Area */
+
+.dropdown {
+  line-height: 21px;
+  display: inline-block;
+}
+.dropdown-menu {
+  background-color:  rgb(240, 240, 240);
+  color: #1e2125;
+}
+
+.custom-option {
+  font-weight: normal;
+  font-size: .875rem;
+  line-height: 1.5;
+  padding: .0625rem 1rem;
+  overflow-wrap: normal;
+}
+.dropdown-item {
+  cursor: pointer;
+}
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0d6efd;
+}
+.dropdown-item.disabled,
+.dropdown-item:disabled {
+  color: #adb5bd;
+  pointer-events: none;
+  background-color: transparent;
 }

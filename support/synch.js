@@ -13,5 +13,7 @@ const setupSynchronicityTimesheet = async() => {
 
 
 //  To Do List
-buildSortedTicketDropDown();
+//buildSortedTicketDropDown();
+
+revBuildSortedTicketDropDown();
 
