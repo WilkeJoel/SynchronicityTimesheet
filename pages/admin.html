@@ -14,7 +14,7 @@
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
+  <link href="../vendor/bootstrap-icons.css" rel="stylesheet">
   <link href="../support/shared_styles.css" rel="stylesheet">
 </head>
 
@@ -35,12 +35,12 @@
             <a class="nav-link disabled" aria-current="page" href="#">Admin</a>
           </li>
         </ul>
-        <form class="d-flex">
+        <!-- <form class="d-flex">
           <div class="input-group input-group-sm">
             <input type="file" class="form-control" id="csvFileInput" aria-describedby="uploadBtn" aria-label="Upload">
             <button class="btn btn-outline-secondary" type="button" id="uploadBtn">Upload</button>
           </div>
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>
@@ -48,12 +48,12 @@
   <main role="main" class="container">
 
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
+    <ul class="nav nav-tabs justify-content-end" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Entry</button>
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Instructions</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="masterTicket-tab" data-bs-toggle="tab" data-bs-target="#masterTicketPanel" type="button" role="tab" aria-controls="masterTicketPanel" aria-selected="true">Master Ticket List</button>
+        <button class="nav-link" id="masterTicket-tab" data-bs-toggle="tab" data-bs-target="#masterTicketPanel" type="button" role="tab" aria-controls="masterTicketPanel" aria-selected="false">Master Ticket List</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="reset-tab" data-bs-toggle="tab" data-bs-target="#resetPanel" type="button" role="tab" aria-controls="resetPanel" aria-selected="false">Store Reset</button>
@@ -66,8 +66,71 @@
     <!-- Tab panes -->
     <div class="tab-content">
       <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div>
+          <h2>Features & Hints</h2>
+          <ul>
+            <li>Uses Papa Parse to parse CSV file</li>
+            <li>During which:</li>
+            <li>Shortens ticket summary</li>
+            <li>Checks for preexisting ticket before saving to db</li>
+            <li>All info stored in local storage using localForage</li>
+            <li>Uses HighCharts to visualize daily time entry</li>
+            <li>New Tickets can be entered by batch or individually</li>
+            <li>Ability to customize which statuses are available to select</li>
+            <li>When you 'Punch Out,' it adds the end time to the last task time entry</li>
+            <li>Task durations are added and converted to minutes</li>
+            <li>A ticket's total time is rounded to 15 minutes</li>
+            <li>To maximize billing, the rounding difference is given to adjust a company's billing time</li>
+            <li>All time is initially 'Billable'</li>
+            <li>A link to the Jira ticket simplifies adding time to the ticket</li>
+            <li>All entered tickets are available in the Master Ticket List in Admin and editable</li>
+            <li></li>
+            <li>Sample data is included to test and troubleshoot with</li>
+            <li>DB/Stores can be flushed and, if necessary, sample data is preset to refresh the stores </li>
+            <li>There is also a function to reset the last time entry to pre 'Punch Out' state</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Instructions</h2>
+          <ul>
+            <li>Upload Tickets</li>
+            <li>
+              <ol>
+                <li>Export timesheet from Jira using a CSV format with the following columns: Issue key, Issue id, Parent id, Summary, Status, Custom field (Customer)</li>
+                <li>Import the CSV file using the File Uploader component</li>
+              </ol>
+            </li>
+            <li>Punch In</li>
+            <li>
+              <ol>
+                <li>Select a ticket from the dropdown to add it to your timesheet.</li>
+                <li>Click 'Now' in the row of the ticket you starting. Or, enter a time.</li>
+                <li>Continue adding tickets or start times as you begin new tasks. When you add a new time, an end time is added to the previous task.</li>
+              </ol>
+            </li>
+            <li>Punch Out</li>
+            <li>
+              <ol>
+                <li>Click 'Punch Out' when done for the day.</li>
+                <li>You are able to edit any enabled input box. </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="tab-pane active" id="masterTicketPanel" role="tabpanel" aria-labelledby="masterTicket-tab">
+
+
+
+      <div class="tab-pane" id="masterTicketPanel" role="tabpanel" aria-labelledby="masterTicket-tab">
         <h1>Master Ticket List</h1>
         <div id="masterTicketTable" class="card-body"></div>
       </div>
@@ -118,7 +181,7 @@
       </div>
     </div>
 
-  </main>
+
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -173,8 +236,13 @@
       </div>
     </div>
   </div>
+</main>
 
-
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">© 2021 Joel Wilke</span>
+    </div>
+  </footer>
   <!-- ================================================== -->
   <script src="../vendor/lodash.js"></script>
   <script src="../vendor/moment.min.js"></script>
@@ -190,7 +258,7 @@
   <script src="../support/synch_storage.js"></script>
   <script src="../support/admin_masterTable.js"></script>
   <script src="../support/admin.js"></script>
-  
+
 </body>
 
 </html>

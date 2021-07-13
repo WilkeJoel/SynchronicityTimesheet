@@ -12,6 +12,7 @@
   <title>Synchronicity</title>
 
   <link href="vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons.css" rel="stylesheet">
   <link href="support/shared_styles.css" rel="stylesheet">
 </head>
 
@@ -56,16 +57,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="input-group input-group-sm">
-              <select class="form-select" id="optTicketSelect" aria-label="Add Ticket to table">
-                <option selected>Optional Add Ticket</option>
-              </select>
-            </div>
-          </div>
+          <div class="col-md-6"> </div>
         </div>
       </div>
-
     </div>
 
     <div class="card">
@@ -78,22 +72,14 @@
               </select>
             </div>
           </div>
-
           <div class="col-md-6">
             <button type="button" id="punchOutBtn" class="btn btn-primary btn-sm">Punch Out</button>
             <button type="button" id="addTicketButton" class="btn btn-secondary btn-sm">Add Ticket</button>
           </div>
         </div>
       </div>
-      <div id="inputTable" class="card-body"></div>
-    </div>
 
-    <div class="card">
-      <div class="card-header">
-        <h1>Output Table</h1>
-      </div>
-      <div id="outputTable" class="card-body">
-      </div>
+      <div id="inputTable" class="card-body"></div>
     </div>
 
     <div class="card">
@@ -105,6 +91,13 @@
       </figure>
     </div>
 
+    <div class="card">
+      <div class="card-header">
+        <h1>Output Table</h1>
+      </div>
+      <div id="outputTable" class="card-body">
+      </div>
+    </div>
   </main>
 
   <!-- Modal -->
@@ -147,6 +140,11 @@
     </div>
   </div>
 
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">© 2021 Joel Wilke</span>
+    </div>
+  </footer>
 
   <!-- ================================================== -->
   <script src="vendor/lodash.js"></script>
