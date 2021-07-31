@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jira integrated time keeper">
+  <meta name="author" content="Joel Wilke">
+  <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+
+  <title>Synchronicity</title>
+
+  <link href="vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons.css" rel="stylesheet">
+  <link href="support/shared_styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Timekeeper</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-current="page" href="#">TimeSheet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/admin.html">Admin</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div class="input-group input-group-sm">
+            <input type="file" class="form-control" id="csvFileInput" aria-describedby="uploadBtn" aria-label="Upload">
+            <button class="btn btn-outline-secondary" type="button" id="uploadBtn">Upload</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main role="main" class="container">
+
+    <div class="card">
+      <div class="card-header">
+        <h1>Splash page</h1>
+      </div>
+      <div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">© 2021 Joel Wilke</span>
+    </div>
+  </footer>
+
+  <!-- ================================================== -->
+  <script src="vendor/lodash.js"></script>
+  <script src="vendor/moment.min.js"></script>
+  <script src="vendor/localforage.min.js"></script>
+  <script src="vendor/popper.min.js"></script>
+  <script src="vendor/bootstrap.min.js"></script>
+  <script src="vendor/papaparse.min.js"></script>
+  <script src="vendor/highcharts.js"></script>
+  <script src="vendor/xrange.js"></script>
+
+  <script src="support/shared_stores.js"></script>
+  <script src="support/shared_tables.js"></script>
+  <script src="support/synch_fileuploader.js"></script>
+  <script src="support/synch_storage.js"></script>
+  <script src="support/synch_timeOperations.js"></script>
+  <script src="support/synch_ticketOperations.js"></script>
+  <script src="support/synch_chart.js"></script>
+  <script src="support/synch_tables.js"></script>
+  <script src="support/synch.js"></script>
+</body>
+
+</html>
