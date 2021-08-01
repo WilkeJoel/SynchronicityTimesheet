@@ -6,3 +6,6 @@ if ("serviceWorker" in navigator) {
         .catch(err => console.log("service worker not registered", err))
     })
   }
+  else {
+    alert("Service workers are not supported by your browser.");
+  }
